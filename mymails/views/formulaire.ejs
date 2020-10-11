@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/stylesheets/style.css">
+    </head>
+    <body>
+
+        <h1>Challenge 4 Juin</h1>
+
+
+        <form action="/enregistrement" method="POST">
+
+
+            <% 
+            if(nom.length<2 && action =="save" ){
+            %>
+                <p class="error">Votre nom doit faire 2 caractères</p>
+            <%
+            }
+            
+            %>
+
+
+            <% 
+            if(prenom.length<2 && action =="save" ){
+            %>
+                <p class="error">Votre nom doit faire 2 caractères</p>
+            <%
+            }
+            
+            %>
+
+            <% 
+            if(téléphone.length>10 && action =="save" ){
+            %>
+                <p class="error">Votre nom doit faire 2 caractères</p>
+            <%
+            }
+            
+            %>
+            
+
+
+
+            
+            <div>
+                <input type="text" name="nom" value="nom">
+            </div>
+            
+
+            <div>
+                <input type="text" name="prenom" value="prenom">
+            </div>
+           
+            <p class="error">un téléphone: égale à 10 caractères</p>
+            <div>
+                <input type="text" name="téléphone" value="téléphone">
+
+            </div>
+            
+            <p class="error">email: au moins 2 caractères, un signe @ et un signe .</p>
+            <div>
+                <input type="text" name="email" value="email">
+            </div>
+            
+            <p class="error">password 1 : au moins 8 caractères</p>
+            <div>
+                <input type="password" name="psw1" value="">
+
+            </div>
+            
+            <p class="error">password 2 (confirmation) : identique à password 1</p>
+            <div>
+                <input type="password" name="psw2" value="">
+            </div>
+                <button>Add</button>
+        </form>
+    
+    </body>
+
+
+
+
+</html>
